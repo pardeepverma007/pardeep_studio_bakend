@@ -1,0 +1,6 @@
+status response 
+informational status code is from 100 to 199
+success Response is 200 to 299
+Redirection Error 300 to 399
+Client Error 400 to 499
+server error 500 to 600 
