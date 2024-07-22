@@ -1,5 +1,9 @@
 const express = require("express");
-const { uploadVideo } = require("../controlers/video.controler");
+const {
+  uploadVideo,
+  getAllVideos,
+  getVideoById,
+} = require("../controlers/video.controler");
 const route = express.Router();
 const upload = require("../middleware/multer.middleware");
 const verifyJwt = require("../middleware/auth.middleware");
@@ -20,5 +24,8 @@ route.post(
   ]),
   uploadVideo
 );
+
+route.get("/videos", getAllVideos);
+route.get("/video/:id", getVideoById);
 
 module.exports = route;
